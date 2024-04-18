@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jsp-vis"
-version = "1.0.2"
-description = "A flexible enviorment for job shop scheduling using the disjunctive graph apporach."
+version = "1.0.3"
+description = "A visualization tool for job shop scheduling problems."
 readme = "README.md"
 authors = [{ name = "Alexander Nasuta", email = "alexander.nasuta@wzl-iqs.rwth-aachen.de" }]
 license = { file = "LICENSE" }
