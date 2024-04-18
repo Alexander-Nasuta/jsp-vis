@@ -7,7 +7,7 @@
 <div align="center">
    <!--
   <a href="https://cybernetics-lab.de/">
-    <img src="https://github.com/Alexander-Nasuta/graph-jsp-env/raw/master/resources/readme_images/logo.png" alt="Logo" height="80">
+    <img src="https://github.com/Alexander-Nasuta/graph-jsp-env/raw/master/resources/readme_images/logo.png">
   </a>
    -->
 
@@ -15,14 +15,10 @@
      Job Shop Scheduling Problem Visualisations
   </h1>
 
-   
-   <a>
-    <img src="https://raw.githubusercontent.com/Alexander-Nasuta/jsp-vis/main/resources/ft06_console.gif" alt="Logo" height="180">
-  </a>
-
 
 </div>
 
+![](https://raw.githubusercontent.com/Alexander-Nasuta/jsp-vis/main/resources/ft06_console.gif)
 
 - **Github**: https://github.com/Alexander-Nasuta/jsp-vis
 
