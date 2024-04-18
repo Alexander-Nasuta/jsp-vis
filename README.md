@@ -39,7 +39,7 @@ The console visualisation might be used for the `asni` mode of a render function
 
 Install the package with pip:
 ```
-   pip install todo
+   pip install jsp-vis
 ```
 
 # Minimal Working Example: console visualisation

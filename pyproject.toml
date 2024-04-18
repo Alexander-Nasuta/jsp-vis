@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jsp-vis"
-version = "1.0.1"
+version = "1.0.2"
 description = "A flexible enviorment for job shop scheduling using the disjunctive graph apporach."
 readme = "README.md"
-authors = [{ name = "Alexander Nasuta", email = "alexander.nasuta@ima.rwth-aachen.de" }]
+authors = [{ name = "Alexander Nasuta", email = "alexander.nasuta@wzl-iqs.rwth-aachen.de" }]
 license = { file = "LICENSE" }
 classifiers = [
     "License :: OSI Approved :: MIT License",
@@ -36,7 +36,7 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Alexander-Nasuta/pypitemplate"
+Homepage = "https://github.com/Alexander-Nasuta/jsp-vis"
 
 [tool.pytest.ini_options]
 addopts = "--cov=jsp_vis -p no:warnings"
