@@ -24,9 +24,9 @@
 </div>
 
 
-- **Github**: https://github.com/Alexander-Nasuta/graph-jsp-env
+- **Github**: https://github.com/Alexander-Nasuta/jsp-vis
 
-- **PyPi**: https://pypi.org/project/graph-jsp-env/
+- **PyPi**: https://pypi.org/project/jsp-vis/
 
 
 # About The Project
@@ -49,7 +49,6 @@ Install the package with pip:
 # Minimal Working Example: console visualisation
 
 ```python
-import pandas
 from jsp_vis.console import gantt_chart_console
 import pandas as pd
 
