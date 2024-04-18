@@ -15,11 +15,11 @@
      Job Shop Scheduling Problem Visualisations
   </h1>
 
-   <!--
+   
    <a>
-    <img src="https://github.com/Alexander-Nasuta/graph-jsp-env/raw/master/resources/readme_images/graph_jsp_tikz.png" alt="Logo" height="180">
+    <img src="https://raw.githubusercontent.com/Alexander-Nasuta/jsp-vis/main/resources/ft06_console.gif" alt="Logo" height="180">
   </a>
--->
+
 
 </div>
 
@@ -68,7 +68,7 @@ gantt_chart_console(df, num_of_machines)
 ```
 The code above will render the following Gantt chart in the console:
 
-![](https://github.com/Alexander-Nasuta/graph-jsp-env/raw/master/resources/readme_images/ft06_window_presi.gif)
+![](https://raw.githubusercontent.com/Alexander-Nasuta/jsp-vis/main/resources/example_console.png)
 
 # Minimal Working Example: console visualisation
 
@@ -98,7 +98,7 @@ render_gantt_in_window(
 
 The code above will render the following Gantt chart in the console:
 
-![](https://github.com/Alexander-Nasuta/graph-jsp-env/raw/master/resources/readme_images/ft06_window_presi.gif)
+![](https://raw.githubusercontent.com/Alexander-Nasuta/jsp-vis/main/resources/example_window.png)
 
 
 # More Examples
