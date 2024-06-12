@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jsp-vis"
-version = "1.0.3"
+version = "1.0.5"
 description = "A visualization tool for job shop scheduling problems."
 readme = "README.md"
 authors = [{ name = "Alexander Nasuta", email = "alexander.nasuta@wzl-iqs.rwth-aachen.de" }]

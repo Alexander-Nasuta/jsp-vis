@@ -92,6 +92,7 @@ def gantt_chart_console(df: pd.DataFrame, n_machines: int, c_map="rainbow") -> N
     colors = {f"Machine {m_id}": (r, g, b) for m_id, (r, g, b, a) in machine_colors.items()}
 
     if len(df) > 0:
+        df = df[['Task', 'Start', 'Finish', 'Resource']]
         machines = sorted(df['Resource'].unique())
         jobs = df['Task'].unique()
         jobs.sort()

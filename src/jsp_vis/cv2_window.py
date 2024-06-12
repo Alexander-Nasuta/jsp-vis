@@ -1,5 +1,7 @@
 import cv2
 import signal
+import threading
+
 
 import pandas as pd
 import numpy.typing as npt
@@ -13,9 +15,10 @@ def handler_stop_signals(*_) -> None:
     """
     cv2.destroyAllWindows()
 
+if threading.current_thread() is threading.main_thread():
+    signal.signal(signal.SIGINT, handler_stop_signals)
+    signal.signal(signal.SIGTERM, handler_stop_signals)
 
-signal.signal(signal.SIGINT, handler_stop_signals)
-signal.signal(signal.SIGTERM, handler_stop_signals)
 
 
 def render_rgb_array(vis: npt.NDArray, *, window_title: str = "Job Shop Scheduling", wait: int = 1) -> None:
