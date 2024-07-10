@@ -6,6 +6,13 @@ from jsp_vis.console import gantt_chart_console, graph_console
 def test_gantt_console(custom_jsp_instance_df, custom_jsp_n_machines):
     gantt_chart_console(pd.DataFrame(custom_jsp_instance_df), custom_jsp_n_machines)
 
+def test_gantt_console_custom_resource_name(custom_jsp_instance_df_named_resources, custom_jsp_n_machines):
+    gantt_chart_console(pd.DataFrame(
+        custom_jsp_instance_df_named_resources),
+        custom_jsp_n_machines,
+        resource_naming='MyCustomMachine'
+    )
+
 
 def test_gantt_console_ft06(ft06_df, ft06_n_machines):
     gantt_chart_console(pd.DataFrame(ft06_df), ft06_n_machines)
@@ -23,3 +30,4 @@ def test_graph_console_ft06(ft06, ft06_df):
         df=pd.DataFrame(ft06_df),
         jsp_instance=ft06,
     )
+

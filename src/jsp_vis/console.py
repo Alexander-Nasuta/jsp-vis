@@ -66,12 +66,13 @@ def wrap_with_color_codes(s: object, /, r: int | float, g: int | float, b: int |
            f"{CEND}"
 
 
-def gantt_chart_console(df: pd.DataFrame, n_machines: int, c_map="rainbow") -> None:
+def gantt_chart_console(df: pd.DataFrame, n_machines: int, c_map="rainbow", resource_naming="Machine") -> None:
     """
     console version of the `gantt_chart_rgb_array`-method. prints a gant chart to the console.
     the parameters need to follow the plotly specification.
     see: https://plotly.com/python/gantt/ or `gantt_chart_rgb_array`
 
+    :param resource_naming:
     :param df:      dataframe according to `plotly` specification (https://plotly.com/python/gantt/).
 
     :return:        a `plotly` gantt chart as rgb array.
@@ -89,7 +90,7 @@ def gantt_chart_console(df: pd.DataFrame, n_machines: int, c_map="rainbow") -> N
     c_map = matplotlib.colormaps.get_cmap(c_map)  # select the desired cmap
     arr = np.linspace(0, 1, n_machines)  # create a list with numbers from 0 to 1 with n items
     machine_colors = {m_id: c_map(val) for m_id, val in enumerate(arr)}
-    colors = {f"Machine {m_id}": (r, g, b) for m_id, (r, g, b, a) in machine_colors.items()}
+    colors = {f"{resource_naming} {m_id}": (r, g, b) for m_id, (r, g, b, a) in machine_colors.items()}
 
     if len(df) > 0:
         df = df[['Task', 'Start', 'Finish', 'Resource']]

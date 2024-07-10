@@ -34,6 +34,22 @@ def custom_jsp_instance_df():
 
 
 @pytest.fixture(scope="function")
+def custom_jsp_instance_df_named_resources():
+    import pandas as pd
+    df = [
+        {'Task': 'Job 0', 'Start': 5, 'Finish': 16, 'Resource': 'MyCustomMachine 0'},
+        {'Task': 'Job 0', 'Start': 28, 'Finish': 31, 'Resource': 'MyCustomMachine 1'},
+        {'Task': 'Job 0', 'Start': 31, 'Finish': 34, 'Resource': 'MyCustomMachine 2'},
+        {'Task': 'Job 0', 'Start': 34, 'Finish': 46, 'Resource': 'MyCustomMachine 3'},
+        {'Task': 'Job 1', 'Start': 0, 'Finish': 5, 'Resource': 'MyCustomMachine 0'},
+        {'Task': 'Job 1', 'Start': 5, 'Finish': 21, 'Resource': 'MyCustomMachine 2'},
+        {'Task': 'Job 1', 'Start': 21, 'Finish': 28, 'Resource': 'MyCustomMachine 1'},
+        {'Task': 'Job 1', 'Start': 28, 'Finish': 32, 'Resource': 'MyCustomMachine 3'}
+    ]
+    yield pd.DataFrame(df)
+
+
+@pytest.fixture(scope="function")
 def custom_jsp_n_machines():
     yield 4
 
