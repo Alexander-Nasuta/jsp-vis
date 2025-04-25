@@ -1,4 +1,10 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15044226.svg)](https://doi.org/10.5281/zenodo.15044226)
+![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat)
+[![PyPI version](https://img.shields.io/pypi/v/jsp-vis)](https://pypi.org/project/jsp-vis/)
+![License](https://img.shields.io/pypi/l/jsp-vis)
+[![Documentation Status](https://readthedocs.org/projects/jsp-vis/badge/?version=latest)](https://jsp-vis.readthedocs.io/en/latest/?badge=latest)
+
+
 
 <div id="top"></div>
 
