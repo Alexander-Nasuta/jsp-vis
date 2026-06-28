@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jsp-vis"
-version = "1.1.0"
+version = "1.2.0"
 description = "A visualization tool for job shop scheduling problems."
 readme = "README.md"
 authors = [{ name = "Alexander Nasuta", email = "alexander.nasuta@wzl-iqs.rwth-aachen.de" }]
@@ -19,12 +19,12 @@ dependencies = [
     "opencv-python",
     "plotly",
     # "networkx>=3",
-    "matplotlib<3.9",
+    "matplotlib",
     "numpy",
     "pandas",
     "kaleido",
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.13"
 
 [project.optional-dependencies]
 dev = [

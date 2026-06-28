@@ -4,6 +4,7 @@ import shutil
 import matplotlib
 import numpy as np
 import pandas as pd
+from matplotlib.colors import LinearSegmentedColormap
 
 import logging
 
@@ -95,8 +96,7 @@ def gantt_chart_console(df: pd.DataFrame, n_machines: int, c_map="rainbow", reso
     if len(df) > 0:
         df = df[['Task', 'Start', 'Finish', 'Resource']]
         machines = sorted(df['Resource'].unique())
-        jobs = df['Task'].unique()
-        jobs.sort()
+        jobs = sorted(df['Task'].unique())
     else:
         jobs, machines = None, None
 
@@ -209,3 +209,54 @@ def graph_console(df: pd.DataFrame, jsp_instance: np.ndarray, c_map="rainbow"):
                     node_str += " "
             row += node_str
         print("".join([row, " " * 4, m_str if m_str is not None else ""]))
+
+
+if __name__ == '__main__':
+    import pandas as pd
+
+    df = [
+        {'Task': 'Job 0', 'Start': 5, 'Finish': 16, 'Resource': 'Machine 0'},
+        {'Task': 'Job 0', 'Start': 28, 'Finish': 31, 'Resource': 'Machine 1'},
+        {'Task': 'Job 0', 'Start': 31, 'Finish': 34, 'Resource': 'Machine 2'},
+        {'Task': 'Job 0', 'Start': 34, 'Finish': 46, 'Resource': 'Machine 3'},
+        {'Task': 'Job 1', 'Start': 0, 'Finish': 5, 'Resource': 'Machine 0'},
+        {'Task': 'Job 1', 'Start': 5, 'Finish': 21, 'Resource': 'Machine 2'},
+        {'Task': 'Job 1', 'Start': 21, 'Finish': 28, 'Resource': 'Machine 1'},
+        {'Task': 'Job 1', 'Start': 28, 'Finish': 32, 'Resource': 'Machine 3'}
+    ]
+
+    custom_jsp_n_machines = 4
+
+    gantt_chart_console(
+        df=pd.DataFrame(df),
+        n_machines=custom_jsp_n_machines,
+    )
+
+    df = [
+        {'Task': 'Job 0', 'Start': 5, 'Finish': 16, 'Resource': 'Mach. 0'},
+        {'Task': 'Job 0', 'Start': 28, 'Finish': 31, 'Resource': 'Mach. 1'},
+        {'Task': 'Job 0', 'Start': 31, 'Finish': 34, 'Resource': 'Mach. 2'},
+        {'Task': 'Job 0', 'Start': 34, 'Finish': 46, 'Resource': 'Mach. 3'},
+        {'Task': 'Job 1', 'Start': 0, 'Finish': 5, 'Resource': 'Mach. 0'},
+        {'Task': 'Job 1', 'Start': 5, 'Finish': 21, 'Resource': 'Mach. 2'},
+        {'Task': 'Job 1', 'Start': 21, 'Finish': 28, 'Resource': 'Mach. 1'},
+        {'Task': 'Job 1', 'Start': 28, 'Finish': 32, 'Resource': 'Mach. 3'}
+    ]
+
+    gantt_chart_console(
+        df=pd.DataFrame(df),
+        n_machines=custom_jsp_n_machines,
+        resource_naming="Mach.",
+        c_map="jet",
+    )
+
+    colors = ["#dc8a78", "#8839ef", "#e64553", "#209fb5"]  # your 3 colors
+    from matplotlib.colors import ListedColormap
+    catpuccin = LinearSegmentedColormap.from_list("custom_cmap", colors)
+
+    gantt_chart_console(
+        df=pd.DataFrame(df),
+        n_machines=custom_jsp_n_machines,
+        resource_naming="Mach.",
+        c_map=catpuccin,
+    )
