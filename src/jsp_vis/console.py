@@ -82,7 +82,7 @@ def gantt_chart_console(df: pd.DataFrame, n_machines: int, c_map="rainbow", reso
 
         import numpy as np
 
-        c_map = plt.cm.get_cmap("jet")  # select the desired cmap
+        c_map = matplotlib.colormaps.get_cmap("jet")  # select the desired cmap
         arr = np.linspace(0, 1, 10)  # create a list with numbers from 0 to 1 with n items
         colors = {resource: c_map(val) for resource, val in enumerate(arr)}
     """
